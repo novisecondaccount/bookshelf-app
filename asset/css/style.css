@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+* {
+ 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #D3DEDC;
+}
+header {
+    background: #06283D;
+    color: #fafafafa;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.wrapper {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container:nth-child(2), .container:nth-child(3) {
+    background-color: #DFF6FF;
+    border-radius: 20px;
+    box-shadow: 2px -1px 13px 0px rgba(0,0,0,0.75);
+}
+.wrap-profile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.info-profile {
+    margin-top: 100px;
+    width: 100%;
+    height: 250px;
+    background-color: #DFF6FF;
+    padding: 10px;
+    position: relative;
+    border-radius: 20px;
+}
+.info-profile > img{
+    border-radius: 50%;
+    border: 5px solid #DFF6FF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-120%) translateX(-50%);
+}
+.info-jumlah {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0 10px;
+}
+.text-center {
+    text-align: center;
+}
+
+.btn-icon{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid #06283D;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn-profile {
+    width: 100%;
+    padding: 10px 30px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    background: #06283D;
+}
+.btn {
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    background: #06283D;
+}
+button > img{
+    width: 100%;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #DFF6FF;
+    width: 90%;
+    height: max-content;
+    padding: 0 20px;
+    color: #06283D;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 2px 27px -1px rgba(0,0,0,0.75);
+}
+form.active {
+    visibility: visible;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text], input[type=date] {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #1363DF;
+    padding: 5px 10px;
+    color: #06283D;
+    font-size: 1.02rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+input[type=text], input[type=date]:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #1363DF;
+
+}
+.wrapper#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.check-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../images/check-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+.check-button:hover {
+    background: url('../images/check-solid.svg');
+    background-size: contain;
+}
+.trash-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../images/trash-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('../images/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../images/undo-ouline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('../images/undo-ouline.svg');
+    background-size: contain;
+}
+
+.edit-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('../images/edit-outline.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+.edit-button:hover {
+    background: url('../images/edit-solid.svg');
+    background-size: contain;
+}
+.list-buku {
+    width: 100%;
+}
+.item-buku {
+    background: #06283D;
+    color: #fafafafa;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.crud-buku {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info-buku p {
+    color: #D3DEDC;
+}
+table {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+.display {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS";
+}
+
+.search {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 30px !important;
+}
+
+.error {
+    font-size: 1rem;
+    color: crimson;
+    font-style: italic;
+}
+@media (min-width: 1024px) {
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .container {
+        margin-top: 20px;
+        width: 30%;
+    }
+    .container:nth-child(1) {
+        order: 2;
+        align-self: flex-start;
+    }
+    .container:nth-child(2) {
+        order: 1;
+        height: calc(100vh - 8rem);
+        overflow: auto;
+    }
+    .container:nth-child(3) {
+        order: 3;
+        height: calc(100vh - 8rem);
+        overflow: auto;
+
+    }
+ 
+    form {
+        width: 50%;
+    }
+}

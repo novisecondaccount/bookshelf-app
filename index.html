@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="asset/css/toast.css">
+    <link rel="stylesheet" href="asset/css/modal.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+
+</head>
+<body>
+    <header>
+        Bookshelf App
+    </header>
+    <div class="wrapper" id="blur">
+        <div class="container wrap-profile" >
+            <div class="info-profile">
+                <img src="asset/images/dp beluga.jpg" alt="avatar">
+                <div class="info-jumlah">
+                    <table>                 
+                        <tr>
+                            <th>Belum dibaca</th>
+                            <td>: <span id="belumbaca" class="display">0</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sudah dibaca</th>
+                            <td>: <span id="selesaibaca" class="display">0</span></td>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <td>: <span id="total-buku" class="display">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class="btn-profile tambah">Tambah Buku</button>
+            <input type="text" class="search" name="cari" id="cari" placeholder="Cari Judul Buku. . .">
+
+        </div>
+        <div class="container">
+            <h3>List Buku Belum dibaca</h3>
+            <div class="list-buku" id="buku-ongoing">          
+            </div>
+        </div>
+        <div class="container">
+            <h3>List Buku Sudah dibaca</h3>
+            <div class="list-buku" id="buku-selesai">
+                <div class="item-buku">
+                    <div class="info-buku">
+                        <h3>Harry Pooter</h3>
+                        <p>JK Rowling</p>
+                        <p>2022</p>
+                    </div>
+                    <div class="crud-buku">
+                        <button class="edit-button"></button>
+                        <button class="undo-button"></button>
+                        <button class="trash-button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="" id="formbuku">
+        <input type="hidden" id="idBuku">
+        <div class="form-group">
+            <label for="judul">Judul Buku</label>
+            <input type="text" id="judul">
+            <span id="fJudul" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="judul">Author Buku</label>
+            <input type="text" id="author" >
+            <span id="fAuthor" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="judul">Tahun Buku</label>
+            <input type="text" id="tahun">
+            <span id="fTahun" class="error"></span>
+
+        </div>
+        <button type="submit" class="btn btn-profile">Submit</button>
+        <button type="button" class="btn btn-profile" onclick="toogleForm()">Kembali</button>
+    </form>
+    <script src="asset/js/modal.js"></script>
+    <script src="asset/js/toast.js"></script>
+    <script src="asset/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.modal {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    min-width: 400px;
+    padding: 6px;
+    background: #06283D;
+    color: #fafafa;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, .2);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, top 0.2s, visibily 0.2s;
+}
+.modal-visible {
+    opacity: 1;
+    visibility: visible;
+    top: 15%;
+}
+.modal > p{
+    font-size: 1rem;
+}
+.modal button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+}
+.secondary {
+    background: #aaaaaa;
+}
+.danger {
+    background: crimson;
+}
+.danger:hover {
+    background: #fafafa;
+}
+.secondary:hover {
+    background: #fafafa;
+}
