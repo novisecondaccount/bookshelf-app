@@ -107,7 +107,7 @@ function notFound() { //fungsi untuk menampilkan toast not found jika tidak ada 
         }
     })
     if(notFound == books.length) {
-        Toast.show("Buku yang dicari tidak ada ditemukan", 'error')
+        Toast.show("Buku yang dicari tidak ditemukan", 'error')
     }
 }
 function addBook() {
